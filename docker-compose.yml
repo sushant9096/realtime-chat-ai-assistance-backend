@@ -23,6 +23,6 @@ services:
       DB_PASS: ${DB_PASS}
       DB_NAME: ${DB_NAME}
     ports:
-      - "3000:3000"
+      - ${APP_PORT}:${APP_PORT}
     depends_on:
       - database

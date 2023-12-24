@@ -1,26 +1,28 @@
 ### This is open source project for the Realtime Chat Application using Node.js, Express, Socket.io, MySQL, Sequelize ORM.
 
 #### Setup Instructions
-1. Install Node.js
-2. Install Mysql (I recommend MariaDB with Xammp Server) database and create database names as rcwa
-3. Clone repository
-4. cd into backend folder
-5. Download firebase service account json file and add it to backend folder
-6. create .env file and add following variables (replace values with your own values)
-7.  ```dotenv
-    FIREBASE_CREDENTIALS_PATH=filename      # firebase credentials path
-    APP_PORT=8000                   # app port
-    DB_HOST=localhost               # database connection host
-    DB_USER=root                    # database username
-    DB_PASS=secret@123              # database password
-    DB_NAME=express-sequelize-api   # database name
-    DB_DIALECT=mysql                # database dialect
-    DB_PORT=3306                    # database port
-    ```
-8. Install dependencies
-9. Run backend with 
-10. ```bash
-    npm run dev
+1. Install Docker and Docker Compose
+2. Clone the repository
+3. cd into the project directory
+4. ```env
+   # Create .env file in the root directory
+   # Add the following environment variables with your own respective values
+   FIREBASE_CREDENTIALS_PATH=google-service-account.json # firebase credentials path
+   APP_PORT=3001 # app port
+   DB_HOST=localhost # database connection host
+   DB_USER=rcwai_user # database username
+   DB_PASS=secret@123 # database password
+   DB_NAME=rcwai # database name
+   DB_DIALECT=mysql # database dialect
+   DB_PORT=3306 # database port
+   MYSQL_ROOT_PASS=root@123 # mysql root password
+   OPENAI_API_KEY=openai_api_key # openai api key
+   ```
+5. Run the following commands
+    ```bash
+    docker compose build
+    docker compose up database -d
+    docker compose up app -d
     ```
 
 #### Author
