@@ -1,10 +1,10 @@
-### This is open source project for the Realtime Chat Application using Node.js, Express, Socket.io, MySQL, Sequelize ORM.
+### This is open source project for the Realtime Chat with AI Application using Node.js, Express, Socket.io, MySQL, Sequelize ORM.
 
 #### Setup Instructions
 1. Install Docker and Docker Compose
 2. Clone the repository
 3. cd into the project directory
-4. ```env
+4. ```dotenv
    # Create .env file in the root directory
    # Add the following environment variables with your own respective values
    FIREBASE_CREDENTIALS_PATH=google-service-account.json # firebase credentials path
@@ -18,12 +18,12 @@
    MYSQL_ROOT_PASS=root@123 # mysql root password
    OPENAI_API_KEY=openai_api_key # openai api key
    ```
-5. Run the following commands
-    ```bash
-    docker compose build
-    docker compose up database -d
-    docker compose up app -d
-    ```
+5. Run the following commands:
+6. ```bash
+   docker compose build
+   docker compose up db -d
+   docker compose up app -d
+   ```
 
 #### Author
 | Name                                           | Email                                                                                                                               |
