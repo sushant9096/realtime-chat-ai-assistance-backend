@@ -1,0 +1,5 @@
+/node_modules/
+/.idea/
+.env
+/google-service-account.json
+/src/config/config.json
